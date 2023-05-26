@@ -1,5 +1,7 @@
+
 let transactions = [];
 
+// Criando Transção
 function createTransactionContainer(id) {
   const container = document.createElement("div");
   container.classList.add("transaction");
@@ -7,6 +9,7 @@ function createTransactionContainer(id) {
   return container;
 }
 
+// Criando Título da transação
 function createTransactionTitle(name) {
   const title = document.createElement("span");
   title.classList.add(`transaction-title`);
@@ -14,6 +17,7 @@ function createTransactionTitle(name) {
   return title;
 }
 
+// Criar Transação em $$ e convertendo números com uma API
 function createTransactionAmount(amount) {
   const span = document.createElement("span");
   span.classList.add(`transaction-amount`);
@@ -63,6 +67,7 @@ function createEditTransactions(transaction) {
   return editBtn;
 }
 
+//Renderizar a página
 function renderTransaction(transaction) {
   const container = createTransactionContainer(transaction.id);
   const title = createTransactionTitle(transaction.name);
